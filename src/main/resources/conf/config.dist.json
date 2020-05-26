@@ -1,0 +1,8 @@
+{
+  "username": "username for talking to the api",
+  "password": "password for the above",
+  "tracked-user": "username for which the followers should be tracked",
+  "log-file": "updates.log",
+  "follower-file": "followers.db",
+  "port": 8080
+}
