@@ -24,6 +24,8 @@ dependencies {
     implementation "io.vertx:vertx-config:3.9.1"
     implementation "io.vertx:vertx-lang-kotlin:3.9.1"
     implementation "io.vertx:vertx-lang-kotlin-coroutines:3.9.1"
+    runtimeOnly "org.slf4j:slf4j-simple:1.7.30"
+    compileOnly "org.slf4j:slf4j-api:1.7.30"
     implementation("org.brunocvcunha.instagram4j:instagram4j:1.14") {
         exclude group: "org.bytedeco"
     }
