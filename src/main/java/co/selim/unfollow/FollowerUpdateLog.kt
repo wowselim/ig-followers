@@ -12,18 +12,18 @@ class FollowerUpdateLog(logFile: String) {
     private val logger = LoggerFactory.getLogger(FollowerUpdateLog::class.java)
 
     fun log(followerUpdates: List<String>) {
+        val date = today()
         Files.newBufferedWriter(
             logPath,
             StandardOpenOption.CREATE,
             StandardOpenOption.APPEND
         ).use { writer ->
             followerUpdates.forEach { update ->
-                writer.appendln("$now - $update")
+                writer.appendln("$date - $update")
             }
         }
         logger.info("Logged follower updates")
     }
 
-    private val now
-        get() = LocalDate.now().format(DateTimeFormatter.ISO_LOCAL_DATE)
+    private fun today() = LocalDate.now().format(DateTimeFormatter.ISO_LOCAL_DATE)
 }
